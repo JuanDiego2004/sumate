@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@import 'uniwind';
+
+/* Paleta del logo "+te". Debe coincidir con src/onboarding/tema.js */
+@theme {
+  --color-tinta: #0f1b33;
+  --color-marca-50: #eaf6ff;
+  --color-marca-100: #d6f1ff;
+  --color-marca-300: #7de3ff;
+  --color-marca-500: #2f8bff;
+  --color-marca-600: #1e6bf1;
+  --color-marca-700: #0b4fd8;
+}

@@ -1,24 +1,52 @@
 {
   "expo": {
+    "platforms": [
+      "android"
+    ],
     "name": "sumate",
     "slug": "sumate",
     "version": "1.0.0",
+    "scheme": "sumate",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "package": "com.juandiego12345.sumate"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "plugins": [
+      "expo-status-bar",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Usamos la cámara para verificar tu identidad con tu DNI y tu rostro.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Súmate usa tu ubicación para mostrarte negocios cercanos."
+        }
+      ],
+      [
+        "expo-router",
+        {
+          "root": "src/app"
+        }
+      ],
+      "expo-image",
+      "expo-font",
+      "expo-splash-screen",
+      "@rnmapbox/maps"
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
